@@ -1,0 +1,63 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+package W04_enkapsulasi;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author $BINTANG LAILATUL MUKAROMAH
+ *22104410062
+ */
+public class mainKinetic {
+   double massa , kecepatan , Ek ; 
+
+    public double getMassa() {
+        return massa;
+    }
+
+    public void setMassa(double massa) {
+        this.massa = massa;
+    }
+
+    public double getKecepatan() {
+        return kecepatan;
+    }
+
+    public void setKecepatan(double kecepatan) {
+        this.kecepatan = kecepatan;
+    }
+    
+    
+    public double Ek (){
+   
+    double hasil = 0.5 * massa * Math.pow(kecepatan, 2);
+    return hasil;
+    }    
+     
+    public static void main(String[] args) {
+        
+      mainKinetic V = new mainKinetic();
+      Scanner Scanner = new Scanner (System.in);
+      System.out.println("masukkan massa sepeda(kg): ");
+      V.setMassa(Scanner.nextDouble());
+        
+        
+      System.out.println("masukkan kecepatan sepeda (m/s):");
+      V.setKecepatan(Scanner.nextDouble());
+        
+        
+      V.getMassa();
+      V.getKecepatan();
+        
+      System.out.println("massa adalah :" + V.getMassa());
+      System.out.println("kecepatan adalah:" + V.getKecepatan());
+      System.out.println("hasil adalah"+ V.Ek ());
+              
+        
+    }
+
+}
